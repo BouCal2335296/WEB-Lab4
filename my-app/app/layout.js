@@ -1,4 +1,3 @@
-import "./globals.css";
 import "./style/style.css";
 import HEADER from "./component/include/Header";
 import FOOTER from "./component/include/Footer";
@@ -11,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bgDark">
         <HEADER />
         {children}
         <FOOTER />

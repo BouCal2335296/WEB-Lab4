@@ -1,4 +1,4 @@
-function Comment({commentaire})
+export default function Comment({commentaire})
 {
     return <>
     <div className="row pt-4">

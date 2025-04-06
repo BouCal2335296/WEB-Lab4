@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header()
 {
     return <>
@@ -19,7 +21,7 @@ export default function Header()
                         {/* Contenu de la navbar */}
                         <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav w-100 d-flex align-items-md-center justify-content-between">
-                            <li className="nav-item"><a className="nav-link option-nav active lora-font text-white" href="principale.html">Menu 1</a></li>
+                            <li className="nav-item"><Link className="nav-link option-nav active lora-font text-white" href="/">Menu 1</Link></li>
                             <li className="nav-item"><a className="nav-link option-nav lora-font text-white" href="#">Menu 2</a></li>
                             <li className="nav-item"><a className="nav-link option-nav lora-font text-white" href="#">Menu 3</a></li>
                             <li className="nav-item"><a className="nav-link option-nav lora-font text-white" href="#">Menu 4</a></li>

@@ -1,19 +1,15 @@
-function getBlogId()
-{
-    const urlIdBlog = new URLSearchParams(window.location.search);
-    return urlIdBlog.get("id");
-}
+"use client"
+import BlogDetails from "./BlogDetails";
+import AddComment from "./AddComment";
+import CommentList from "./CommentList";
+import CommentSection from "./CommentSection";
 
-function App()
+export default function Blog({id})
 {
-    
     return <>
-    <BlogDetails id={getBlogId()} />
-    <AddComment id={getBlogId()}/>
-    <CommentList id={getBlogId()}/>
+    <div className="container">
+        <BlogDetails id={id} />
+        <CommentSection id={id}/>
+    </div>
     </>
 }
-
-const container = document.querySelector("#blog")
-const root = ReactDOM.createRoot(container)
-root.render(<App />)

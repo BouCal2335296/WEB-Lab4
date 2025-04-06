@@ -1,10 +1,15 @@
-function AjoutPublication() 
+"use client";
+import React from "react";
+// import { useRouter } from "next/router";
+
+export default function AjoutPublication() 
 {
     const dateISO = new Date();
     const date = dateISO.toISOString().split('T')[0];
     const [titre, setTitre] = React.useState('');
     const [auteur, setAuteur] = React.useState('');
     const [contenu, setContenu] = React.useState('');
+    // const router = useRouter();
 
     function handleTitre(event) {
         setTitre(event.target.value);
@@ -18,27 +23,24 @@ function AjoutPublication()
         setContenu(event.target.value);
     }
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
         if(window.confirm('Confirmer publication blog ?'))
         {
             console.log('Submit');
-            fetch('http://localhost:3000/publication', {
+            //Appel l'API de publication pour POST le commentaire
+            const response = await fetch('/api/publication', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({ titre, auteur, contenu })
-            }).then(response => {
-            if (response.ok) {
-                window.location.href = "principale.html";
-            } else {
-                alert("Erreur lors de la publication");
-                $("#ajouter").fadeIn(200);
-            }
-            }).catch(error => {
-                console.error('Erreur:', error);
-                alert("Impossible de contacter le serveur");
-                $("#ajouter").fadeIn(200);
             });
+
+            if (response.ok) {
+                console.log('Publication ajoutée');
+                // router.push('/');
+            } else {
+                alert('Erreur lors de la publication');
+            }
         }
     }
 

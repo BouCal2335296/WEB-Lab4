@@ -1,5 +1,8 @@
+"use client";
+import BlogCard from "./BlogCard";
+import React from "react";
 
-function BlogList() {
+export default function BlogList() {
   const [blogs, setBlogs] = React.useState([]);
 
   React.useEffect(() => {
@@ -13,9 +16,13 @@ function BlogList() {
 
   return (
     <>
-      {blogs.map(blog => (
-          <BlogCard key={blog.id} id={blog.id} titre={blog.titre} contenu={blog.contenu} />
-        ))}
+    <div className="container">
+      <div className="row d-flex justify-content-center justify-content-md-start">
+        {blogs.map(blog => (
+            <BlogCard key={blog.id} id={blog.id} titre={blog.titre} contenu={blog.contenu} />
+          ))}
+      </div>
+    </div>
     </>
   );
 }
