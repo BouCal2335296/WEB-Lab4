@@ -21,10 +21,10 @@ export default function Header()
                         {/* Contenu de la navbar */}
                         <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav w-100 d-flex align-items-md-center justify-content-between">
-                            <li className="nav-item"><Link className="nav-link option-nav active lora-font text-white" href="/">Menu 1</Link></li>
-                            <li className="nav-item"><a className="nav-link option-nav lora-font text-white" href="#">Menu 2</a></li>
-                            <li className="nav-item"><a className="nav-link option-nav lora-font text-white" href="#">Menu 3</a></li>
-                            <li className="nav-item"><a className="nav-link option-nav lora-font text-white" href="#">Menu 4</a></li>
+                            <li className="nav-item"><Link className="nav-link option-nav active lora-font text-white" href="/">Publication</Link></li>
+                            <li className="nav-item"><Link className="nav-link option-nav lora-font text-white" href="/ajoutPublication">Céer publication</Link></li>
+                            <li className="nav-item"><Link className="nav-link option-nav lora-font text-white" href="/modifierPublication">Modifier publication</Link></li>
+                            <li className="nav-item"><Link className="nav-link option-nav lora-font text-white" href="/supprimerPublication">Supprimer publication</Link></li>
                             <li className="nav-item">
                             <a className="nav-link" href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-circle imgNav" viewBox="0 0 16 16  ">

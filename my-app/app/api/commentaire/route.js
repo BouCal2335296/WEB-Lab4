@@ -1,7 +1,7 @@
 "use server"
 import { NextResponse } from 'next/server';
 
-// Gérer la requête POST
+// Affiche tous les commentaires
 export async function GET() {
     try {
 
@@ -15,6 +15,7 @@ export async function GET() {
     }
 }
 
+// Publie un commentaire associé à un blog
 export async function POST(param) {
     try {
         const data = await param.json();

@@ -1,11 +1,10 @@
 {
   "publication": [
     {
-      "id": "1",
-      "titre": "Blog1",
-      "auteur": "Carlo",
-      "date": "01/01/2023",
-      "contenu": "test test test test test test "
+      "titre": "deded",
+      "auteur": "dedede",
+      "contenu": "deded",
+      "id": "1"
     },
     {
       "id": "2",
@@ -20,18 +19,6 @@
       "auteur": "Carlo",
       "date": "01/01/2023",
       "contenu": "jean-nicolas le goat "
-    },
-    {
-      "id": "1a2d",
-      "titre": "cwsd",
-      "auteur": "fredsc",
-      "contenu": "fresdc"
-    },
-    {
-      "id": "d22b",
-      "titre": "test",
-      "auteur": "test",
-      "contenu": "test"
     }
   ],
   "commentaire": [
@@ -94,24 +81,6 @@
       "blogId": "10",
       "date": "01/01/2023",
       "contenu": "Commentaire 10"
-    },
-    {
-      "id": "6441",
-      "blogId": "1",
-      "date": "2025-04-05",
-      "contenu": "test"
-    },
-    {
-      "id": "1719",
-      "blogId": "1",
-      "date": "2025-04-06",
-      "contenu": "qwqw"
-    },
-    {
-      "id": "9136",
-      "blogId": "1",
-      "date": "2025-04-06",
-      "contenu": "dwasx"
     }
   ]
 }
