@@ -30,14 +30,17 @@ export async function POST(param) {
 
 export async function PUT(param) {
     try {
-        const id = param.get('id');
-        const data = await param.json();
+        const id =  param.get('id');
+            const titre =  param.get('titre');
+            const auteur = param.get('auteur');
+            const contenu = param.get('contenu');
+
         await fetch(`http://localhost:3000/publication/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify({titre, auteur, contenu}),
         });
     } catch (error) {
         console.error(error);
